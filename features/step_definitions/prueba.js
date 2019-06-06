@@ -42,5 +42,7 @@ When('Presiono la receta CORONA DE ROLLITOS DE CANELA', async function () {
 
 Then('La receta contiene los ingredientes Azúcar rubia y canela', async function () {
     await testController
-        .expect(Selector('#hero').find('p').with({ boundTestRun: testController }).innerText).contains("CORONA DE ROLLITOS DE CANELA", 'Azúcar rubia', 'Canela')
+        .expect(Selector('#hero').find('p').with({
+            boundTestRun: testController
+        }).innerText).contains("CORONA DE ROLLITOS DE CANELA", 'Azúcar rubia', 'Canela')
 });
